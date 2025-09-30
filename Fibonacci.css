@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+.PageWrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Main {
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+}
+
+.Navbar {
+  width: 100%;
+  height: 45px;
+  background-color: #8540f5;
+  display: flex;
+  padding-left: 16px;
+  color: white;
+  align-items: center;
+}
+
+.Navbar a {
+  text-decoration: none;
+}
+
+.Navbar h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.Navbar h3 {
+  font-size: 16px;
+  margin-left: 32px;
+  font-weight: 400;
+  color: white;
+}
+
+.Navbar a:hover {
+  cursor: pointer;
+}
+
+.Fibonacci {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 6%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Rectangle {
+  background-color: white;
+  width: 50%;
+  height: 100%;
+  padding: 24px 24px 24px 24px;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  position: relative;
+}
+
+.Rectangle2 {
+  background-color: rgb(255, 0, 0);
+  width: 50%;
+  height: 100%;
+  padding: 24px 24px 24px 24px;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+}
+
+.Title {
+  font-size: 33px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.Calculate {
+  color: #3d4f61;
+  font-size: 24px;
+  margin-top: 16px;
+  align-content: center;
+  margin-bottom: 15px;
+}
+
+.Input {
+  background-color: white;
+  width: 68px;
+  height: 38px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin: 4px 20px 4px 20px;
+  text-align: center;
+  padding: 0 5px 0 5px;
+  border: 1px solid #2a5682;
+}
+
+.RectangleBorder {
+  border: #2a5682 1px solid;
+}
+
+.Reset {
+  background-color: white;
+  font-family: "Inter", sans-serif;
+  color: #6610f2;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  border: 2px solid #6610f2;
+  border-radius: 6px;
+  padding: 10px 16px 10px 16px;
+  position: absolute;
+  right: 24px;
+}
+
+.Reset:hover {
+  background-color: hsl(0, 0%, 0%, 7%);
+  cursor: pointer;
+}
+
+.Reset img {
+  margin-right: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Bold {
+  font-weight: 600;
+  margin-right: 30px;
+}
+
+.OutputWrapper {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  color: #3d4f61;
+  scrollbar-width: none;
+}
+
+.Margin {
+  margin-top: 70px;
+}
+
+.Output {
+  position: absolute;
+  bottom: 24px;
+  text-decoration: underline;
+}
+
+.Loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid #8540f5;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
+}
+
+.Hidden {
+  display: none;
+}
+
+.Error {
+  background-color: #f8d7da;
+  border: 1px solid #ea868f;
+  color: #58151c;
+  text-decoration: none;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  align-content: center;
+  padding-left: 15px;
+  border-radius: 6px;
+}
+
+.InputError {
+  border: 2px solid #dc3545;
+  outline: 3px solid hsl(354, 70%, 54%, 20%);
+}
+
+@keyframes l20-1 {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+  12.5% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%
+    );
+  }
+  25% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      100% 100%,
+      100% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  62.5% {
+    clip-path: polygon(
+      50% 50%,
+      100% 0,
+      100% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  75% {
+    clip-path: polygon(
+      50% 50%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      50% 50%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+}
+@keyframes l20-2 {
+  0% {
+    transform: scaleY(1) rotate(0deg);
+  }
+  49.99% {
+    transform: scaleY(1) rotate(135deg);
+  }
+  50% {
+    transform: scaleY(-1) rotate(0deg);
+  }
+  100% {
+    transform: scaleY(-1) rotate(-135deg);
+  }
+}
+
+.cr-wrapper *,
+.cr-wrapper *::before,
+.cr-wrapper *::after {
+  box-sizing: content-box !important;
+}
+
+.cr-wrapper input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.cr-wrapper span {
+  font-size: 16px;
+}
+
+.cr-wrapper {
+  display: table;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+.cr-wrapper input[type="checkbox"] ~ .cr-input {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background: #ffffff;
+  transition: background 250ms;
+  border: 1px solid #abb5be;
+  border-radius: 5px;
+  transform: translate(0, -50%);
+}
+
+.cr-wrapper input[type="radio"] ~ .cr-input {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background: #ffffff;
+  transition: background 250ms;
+  border: 1px solid #abb5be;
+  border-radius: 19px;
+  transform: translate(0, -50%);
+}
+
+.cr-wrapper input[type="checkbox"] ~ .cr-input::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 4px;
+  width: 9px;
+  height: 9px;
+  transition: background 250ms;
+  background-color: #ffffff;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.cr-wrapper input[type="radio"] ~ .cr-input::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 13px;
+  background: #ffffff;
+  transition: background 250ms;
+}
+
+.cr-wrapper input:checked ~ .cr-input::after {
+  display: block;
+}
+
+.cr-wrapper:hover input[type="checkbox"]:not([disabled]) ~ .cr-input,
+.cr-wrapper input[type="checkbox"]:focus ~ .cr-input {
+  background: #e2e8f0;
+  border-color: #abb5be;
+}
+
+.cr-wrapper:hover input[type="radio"]:not([disabled]) ~ .cr-input,
+.cr-wrapper input[type="radio"]:focus ~ .cr-input {
+  background: #e2e8f0;
+  border-color: #abb5be;
+}
+
+.cr-wrapper input[type="checkbox"]:checked ~ .cr-input {
+  background: #7749f8;
+  border-color: #7749f8;
+}
+
+.cr-wrapper input[type="radio"]:checked ~ .cr-input {
+  background: #7749f8;
+  border-color: #7749f8;
+}
+
+.cr-wrapper input[type="checkbox"]:disabled ~ .cr-input,
+.cr-wrapper input[type="radio"]:disabled ~ .cr-input {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cr-wrapper input[type="checkbox"]:disabled ~ span,
+.cr-wrapper input[type="radio"]:disabled ~ span {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cr-wrapper input[type="checkbox"]:disabled ~ .cr-input::after {
+  background: #ffffff;
+}
+
+.cr-wrapper input[type="radio"]:disabled ~ .cr-input::after {
+  background: #ffffff;
+}
+
+.cr-wrapper:hover input[type="checkbox"]:not([disabled]):checked ~ .cr-input,
+.cr-wrapper input[type="checkbox"]:checked:focus ~ .cr-input {
+  background: #7749f8;
+  border-color: #7749f8;
+}
+
+.cr-wrapper:hover input[type="radio"]:not([disabled]):checked ~ .cr-input,
+.cr-wrapper input[type="radio"]:checked:focus ~ .cr-input {
+  background: #7749f8;
+  border-color: #7749f8;
+}
+
+.cr-wrapper {
+  margin-left: 10px;
+  color: #343a40;
+  font-weight: 400;
+}
+
+.SaveCalculationDiv {
+  background-color: #ffffff;
+  width: 50%;
+  padding: 24px 24px 24px 24px;
+  padding-bottom: 90px;
+  color: #343a40;
+  border: solid 1px #dee2e6;
+  border-radius: 12px;
+  position: relative;
+  bottom: 87px;
+  z-index: 2;
+}
+
+.SaveCalculationDiv h1 {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.Loader2 {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid #7749f8;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
+  position: absolute;
+  bottom: 24px;
+}
+
+.Radio {
+  display: flex;
+  position: absolute;
+  top: 40px;
+  right: 24px;
+}
+
+.PastResults {
+  font-size: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.RemovePadding {
+  padding-bottom: 20px;
+}
+
+.PastResult .Number .Result {
+  font-weight: bold;
+}
+
+.PastResult .Date {
+  position: absolute;
+  right: 0;
+}
+
+ul {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+ul > li {
+  -moz-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+li {
+  display: none;
+}
+li:nth-last-child(-n + 3) {
+  display: list-item;
+}

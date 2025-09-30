@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci Calculator</title>
+    <link rel="stylesheet" href="Fibonacci.css" />
+    <link rel="icon" type="image/x-icon" href="./Images/Site Logo.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="PageWrapper">
+      <div class="Main">
+        <div class="Navbar">
+          <a href="Homework.html"><h2>Fibonacci</h2></a>
+          <a href="Homework.html"><h3>Home</h3></a>
+        </div>
+        <div class="Fibonacci">
+          <div class="Rectangle RectangleBorder">
+            <p class="Title">Fibonacci Calculator</p>
+            <p class="Calculate">
+              <button id="ResetButton" class="Reset">
+                <img src="./Images/Reset.svg" /> Reset
+              </button>
+              The Fibonnaci of
+              <input
+                type="number"
+                id="FibonacciInput"
+                class="Input"
+                min="1"
+                max="123"
+                placeholder="X"
+              />
+              <span class="Bold">is </span>
+            </p>
+            <div id="SaveCalculation" class="Hidden">
+              <label class="cr-wrapper">
+                <input
+                  class="Checkbox"
+                  type="checkbox"
+                  id="Checkbox"
+                  unchecked
+                />
+                <div class="cr-input"></div>
+                <span>Save calculation</span>
+              </label>
+            </div>
+            <div class="Error Hidden" id="Error"></div>
+            <div class="OutputWrapper Margin">
+              <h1 class="Output" id="FibonacciOutput">Y</h1>
+              <p class="Loader Hidden" id="Loading"></p>
+            </div>
+          </div>
+          <div class="SaveCalculationDiv Hidden" id="SaveCalculationDiv">
+            <h1>Results</h1>
+            <ul class="PastResults" id="PastResults">
+              <li class="PastResult"></li>
+            </ul>
+            <p class="Loader2" id="Loading2"></p>
+            <div class="Radio">
+              <label class="cr-wrapper">
+                <input name="radio" type="radio" />
+                <div class="cr-input"></div>
+                <span>Date Asc</span>
+              </label>
+              <label class="cr-wrapper">
+                <input name="radio" type="radio" />
+                <div class="cr-input"></div>
+                <span>Date Desc</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="Fibonacci.js"></script>
+  </body>
+</html>
